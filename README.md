@@ -7,6 +7,8 @@
 
 ***
 
+Meu Currículo<https://miltontsilva.github.io/cv/>
+
 # Certificados
 
 ## Microsoft Certified Azure Fundamentals 
