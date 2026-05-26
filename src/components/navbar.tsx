@@ -11,7 +11,6 @@ const Navbar = () => {
     { to: "/", label: "Inicio" },
     { to: "/about", label: "Sobre Mim" },
     { to: "/projects", label: "Projetos" },
-    { to: "/curriculum", label: "Currículo" },
     { to: "/contact", label: "Contato" },
   ];
 
