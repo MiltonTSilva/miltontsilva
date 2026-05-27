@@ -1,0 +1,119 @@
+h1 {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  /* margin-bottom: 16px; */
+  position: relative;
+  color: var(--primary-color);
+}
+
+.section-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+ul {
+  padding: 15px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+  gap: 10px;
+}
+
+.article-group {
+  display: flex;
+  flex-direction: column;
+  background: var(--blue-faint);
+  border: 1px solid var(--blue-pale);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.article-group-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--blue-dark);
+  text-transform: uppercase;  
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  max-height : 100px;
+  text-align: center;
+  border: #ccc 1px solid;
+  border-radius: var(--radius);
+}
+.article-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.article-pill {
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 12px;
+  border: 1px solid var(--blue-pale);
+  color: var(--bg-color);
+  padding: 3px 10px;
+}
+
+.section-article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  /* margin: 0 auto; */
+}
+
+.section-article .article-list button {
+  margin-top: auto;
+}
+
+.section-article .article-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.article-viewer {
+  margin-top: 3rem;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+@media (min-width: 1024px) {
+  .section-home {
+    width: 70%;
+  }
+
+  .article-viewer {
+    width: 100%;
+  }
+
+  .section-article {
+    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .article-grid {
+     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 100%;
+  }
+}

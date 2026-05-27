@@ -8,12 +8,11 @@ a {
 .container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   max-width: 1024px;
   margin: 0 auto;
   background: var(--container-bg);
-  padding: 40px;
+  padding: 10px;
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--shadow);
   position: relative;
@@ -35,8 +34,6 @@ a {
 .header {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
-  margin-top: 10px;
 }
 
 .circle {
@@ -189,7 +186,7 @@ li {
   left: 0;
   padding: 0.05rem;
   list-style: none;
-  height: 20rem;
+  /* height: 20rem; */
   width: 100%;
   font-size: 1.25rem;
   background-color: black;
@@ -249,24 +246,6 @@ li {
   box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
 }
 
-.theme-toggle {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--link-bg);
-  border: 1px solid var(--link-border);
-  color: var(--text-main);
-  padding: 12px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-.theme-toggle:hover {
-  border-color: var(--primary-color);
-}
-
 .section {
   position: absolute;
   left: 25%;
@@ -285,10 +264,10 @@ li {
   padding: 40px;
 }
 
-.section-title {
+.title {
   color: var(--text-secondary);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0px;
   margin: 0;
 }
@@ -298,7 +277,7 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
-    margin: 0 auto;
+  margin: 0 auto;
   width: 70%;
 }
 
@@ -398,8 +377,9 @@ li {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 10px;
+  width: 100%;
 }
 
 .skill-group {
@@ -408,6 +388,7 @@ li {
   border-radius: var(--radius);
   padding: 18px;
 }
+
 .skill-group-title {
   font-size: 12px;
   font-weight: 600;
@@ -418,7 +399,9 @@ li {
 }
 .skill-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
 }
 .skill-pill {
@@ -478,19 +461,36 @@ footer {
     "opsz" 24;
 }
 
+.section-conventional-commits {
+  margin: 0;
+}
+
 .section-background-service {
-  display: none;
+  margin: 0;
+}
+
+
+.button {
+  background-color: var(--blue);
+  cursor: pointer;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow);
+  border: none;
+  padding: 10px 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1024px) {
   .container {
-    padding: 0px 30px;
+    padding: 5px;
   }
 
   .logo-container {
     position: absolute;
-    top: 30px;
-    left: 9rem;
+    top: -13px;
+    left: 6.5rem;
     transform: translateX(-50%);
     text-align: center;
   }
@@ -502,8 +502,8 @@ footer {
   .header {
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 120px;
-    padding: 10px;
+    margin-bottom: 80px;
+    /* padding: 10px; */
   }
 
   .navbar {
@@ -524,7 +524,7 @@ footer {
   .menu {
     background-color: transparent;
     width: auto;
-    height: auto;
+    /* height: auto; */
     flex-direction: row;
     position: static;
     border-bottom: 1px solid var(--bg-color);
@@ -532,11 +532,6 @@ footer {
 
   .menu-toggle {
     display: none;
-  }
-
-  .theme-toggle {
-    top: 40px;
-    right: 30px;
   }
 
   .section-contact {
@@ -555,5 +550,6 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     font-size: 1.2rem;
+    padding: 0px 10px ;
   }
 }

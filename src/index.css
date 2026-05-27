@@ -1,5 +1,7 @@
 :root {
+  --accent: #c8502a;
   --bg-color: #f0f2f5;
+  --border: #e2ddd6;
   --container-bg: #ffffff;
   --text-main: #1c1e21;
   --text-secondary: #5f6368;
@@ -16,10 +18,15 @@
   --ink: #0f1923;
   --ink-mid: #2c3e50;
   --gray: #5f5e5a;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --muted: #7a7269;
+  --surface: #ffffff;
 }
 
 body.dark-mode {
+  --accent: #e06a42;
   --bg-color: #121212;
+  --border: #2e2b27;
   --container-bg: #1e1e1e;
   --text-main: #e4e6eb;
   --text-secondary: #b0b3b8;
@@ -36,6 +43,8 @@ body.dark-mode {
   --ink: #0f1923;
   --ink-mid: #2c3e50;
   --gray: #aaa8a1;
+  --muted: #8c8278;
+  --surface: #1e1c1a;
 }
 
 body {
@@ -48,4 +57,25 @@ body {
   transition:
     background-color 0.3s,
     color 0.3s;
+}
+
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+
+pre {
+  white-space: pre; /* Mantém a formatação original do texto, incluindo espaços e quebras de linha */
+  overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se o conteúdo for muito largo */
+  word-wrap: normal; /* Evita quebras de palavras longas, preferindo a rolagem */
+  -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos iOS */
+  max-width: 100%; /* Garante que o bloco pre não exceda a largura do seu contêiner pai */
+}
+
+code {
+  /* Para garantir que o texto dentro do <code> se ajuste ao <pre> */
+  word-break: break-all; /* Permite quebras de palavras longas se necessário */
+  white-space: pre-wrap; /* Permite quebras de linha dentro do código se o pre-wrap for usado no pre */
+  font-size: 14px;
 }
